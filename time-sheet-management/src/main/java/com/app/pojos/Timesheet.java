@@ -1,5 +1,6 @@
 package com.app.pojos;
 
+import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +15,7 @@ import javax.persistence.Table;
 public class Timesheet {
 
 	private Integer timesheetId;
+	private Date date;
 	private Employee employee;
 	private String company, work, description;
 	private int time;
@@ -77,6 +79,14 @@ public class Timesheet {
 	public void setTime(int time) {
 		this.time = time;
 	}
-	
-	
+
+	@Column
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+		
 }
